@@ -1,0 +1,26 @@
+<div class="players-list-container d-flex">
+  <div class="pep-talk w-100">
+    <b
+      >Jeśli potrafisz o czymś marzyć, to potrafisz tego dokonać. - Walt
+      Disney</b
+    >
+  </div>
+  <div *ngFor="let row of rows">
+    <app-new-row [rowData]="row"></app-new-row>
+  </div>
+  <app-new-player (addRow)="addRow()" *ngIf="isExisting"></app-new-player>
+
+  <div class="row coaches">
+    <div class="col col-9"><b>Coaches</b></div>
+    <input type="text" class="col col-2" />
+    <input type="text" class="col col-1" />
+  </div>
+  <div class="row">
+    <input type="text" class="col col-9" />
+    <input type="text" class="col col-3" style="font-size: 12px" />
+  </div>
+  <div class="row">
+    <input type="text" class="col col-9" />
+    <input type="text" class="col col-3" style="font-size: 12px" />
+  </div>
+</div>

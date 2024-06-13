@@ -1,0 +1,16 @@
+<div class="logo-name-container d-flex">
+  <div class="logo-container">
+    <div class="d-flex logo-club">
+      <input type="text" placeholder="wprowadź tekst" />
+      <img class="logo-img" [src]="logoUrl" />
+    </div>
+
+    <input
+      type="file"
+      class="imgInput"
+      id="fileInput"
+      (change)="onFileSelected($event)"
+      accept="image/*"
+    />
+  </div>
+</div>
