@@ -12,8 +12,8 @@ import { LogoComponent } from '../header/logo/logo.component';
 export class NewPlayerComponent {
   [x: string]: any;
 
-  isExisting = true;
   @Output() addRow = new EventEmitter<void>();
+
   onClick() {
     this.addRow.emit();
   }

@@ -15,9 +15,14 @@ export class PlayersListComponent {
   addRow() {
     this.rows.push(this.rows.length + 1);
     if (this.rows.length >= 18) {
-      window.alert('Dodałeś za dużo zawodników!');
-      this.rows.pop();
-      this.isExisting = false;
+      window.alert(
+        'Liczba zawodników jest większa niż przewidywana, czy chcesz kontynuować dodawanie zawodników?'
+      );
+    }
+  }
+  removeRow(index: number) {
+    if (index > -1) {
+      this.rows.splice(index, 1);
     }
   }
 }
