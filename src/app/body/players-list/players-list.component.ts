@@ -27,10 +27,10 @@ export class PlayersListComponent {
         this.rows.pop();
       }
     }
-    if (document.body.scrollHeight > window.innerHeight) {
-      window.alert("Tabela wykracza poza obszar pierwszej strony! Ale pamiętaj, że po kliknięciu w przycisk 'submit' u góry strony, ten obszar się skróci o dwa wiersze!");
-      return;
-    }
+    // if (document.body.scrollHeight > window.innerHeight) {
+    //   window.alert("Tabela wykracza poza obszar pierwszej strony! Ale pamiętaj, że po kliknięciu w przycisk 'submit' u góry strony, ten obszar się skróci o dwa wiersze!");
+    //   return;
+    // }
   }
 
   removeRow(index: number) {

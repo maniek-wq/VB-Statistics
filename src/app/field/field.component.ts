@@ -46,11 +46,15 @@ export class FieldComponent implements AfterViewInit, OnInit {
   }
   private startPosition(event: MouseEvent, index: number) {
     this.painting = true;
-    const ctx = this.ctxs[index]; // Wybierz odpowiedni kontekst
-    ctx.beginPath();
-    ctx.moveTo(event.clientX - this.canvases.toArray()[index].nativeElement.offsetLeft, 
-               event.clientY - this.canvases.toArray()[index].nativeElement.offsetTop);
-    this.draw(event, index); // Przekaż index do draw
+    const canvas = this.canvases.toArray()[index].nativeElement;
+    const rect = canvas.getBoundingClientRect(); // Uzyskaj pozycję canvas
+
+    const x = event.clientX - rect.left; // Skoryguj współrzędne X
+    const y = event.clientY - rect.top;  // Skoryguj współrzędne Y
+
+    this.ctxs[index].beginPath();
+    this.ctxs[index].moveTo(x, y);
+    this.draw(event, index); // Rozpocznij rysowanie
 }
 
 private endPosition() {
@@ -108,10 +112,14 @@ changeColor(event: Event) {
   private draw(event: MouseEvent,index: number) {
     if (!this.painting) return;
 
-    const ctx = this.ctxs[index]; // Wybierz odpowiedni kontekst
-    ctx.lineTo(event.clientX - this.canvases.toArray()[index].nativeElement.offsetLeft, 
-               event.clientY - this.canvases.toArray()[index].nativeElement.offsetTop);
-    ctx.stroke();
+    const canvas = this.canvases.toArray()[index].nativeElement;
+    const rect = canvas.getBoundingClientRect(); // Uzyskaj pozycję canvas
+
+    const x = event.clientX - rect.left; // Skoryguj współrzędne X
+    const y = event.clientY - rect.top;  // Skoryguj współrzędne Y
+
+    this.ctxs[index].lineTo(x, y);
+    this.ctxs[index].stroke();
   }
  
 
