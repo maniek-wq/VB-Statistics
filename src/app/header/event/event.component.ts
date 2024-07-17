@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { FieldComponent } from "../../field/field.component";
 
 @Component({
-  selector: 'app-event',
-  standalone: true,
-  imports: [],
-  templateUrl: './event.component.html',
-  styleUrl: './event.component.css',
+    selector: 'app-event',
+    standalone: true,
+    templateUrl: './event.component.html',
+    styleUrl: './event.component.css',
+    imports: [FieldComponent]
 })
 export class EventComponent {
   logoUrl: string | ArrayBuffer | null = '';

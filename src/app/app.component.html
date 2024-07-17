@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <app-logo></app-logo>
-    <app-players-list> </app-players-list>
+    <!-- <p class="head"><b>GAMEPLAN</b></p> -->
+    
+    <div class="container-fluid d-flex main-container">
+
+      <nav class="p-2 ">
+        <app-logo></app-logo>
+        <app-players-list> </app-players-list>
+        <app-predicted-squad></app-predicted-squad>
+      </nav>
+      <main class="d-flex main-fields">
+        <app-fields></app-fields>
+        <app-event></app-event>
+      </main>
+    </div>
+
   </body>
 </html>

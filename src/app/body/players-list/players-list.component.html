@@ -9,20 +9,21 @@
     [rowData]="row"
     [rowIndex]="i"
     (rowRemoved)="removeRow($event)"
+    
   >
   </app-new-row>
   <app-new-player (addRow)="addRow()" *ngIf="isExisting"></app-new-player>
 
-  <div class="row coaches">
+  <div class="row coaches" >
     <div class="col col-9"><b>Coaches</b></div>
     <input type="text" class="col col-2" />
     <input type="text" class="col col-1" />
   </div>
-  <div class="row">
+  <div class="row coaches">
     <input type="text" class="col col-9" />
     <input type="text" class="col col-3" style="font-size: 12px" />
   </div>
-  <div class="row">
+  <div class="row coaches">
     <input type="text" class="col col-9" />
     <input type="text" class="col col-3" style="font-size: 12px" />
   </div>

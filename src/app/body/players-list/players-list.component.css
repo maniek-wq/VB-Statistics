@@ -1,19 +1,19 @@
 .players-list-container {
-  width: 500px;
+  width: 35dvw;
+  max-width: 36dvw;
   height: max-content;
   border: solid 1px black;
-  margin: 0 auto;
+ 
   flex-direction: column;
 }
-.coaches {
-}
+
 .pep-talk {
   background-color: gold;
   width: 100%;
   height: 100px;
   border: solid 1px black;
   text-align: center;
-  margin: 0 auto;
+  
   padding: 0;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
 .row {
   width: 100%;
   height: 25px;
-  margin: 0 auto;
+
 }
 .col {
   border: solid 0.5px black;
@@ -40,5 +40,6 @@ input {
 .btn {
   border-radius: 0px 0px 0px 0px;
 }
-.text-area {
+.coaches{
+  margin: 0 auto;
 }

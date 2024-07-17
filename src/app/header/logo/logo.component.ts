@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NewRowComponent } from '../../new-row/new-row.component';
 import { StateService } from '../../../state.service';
 @Component({
   selector: 'app-logo',
@@ -16,9 +15,9 @@ export class LogoComponent {
 
   constructor(public stateService: StateService) {}
 
-  checkForm() {
-    this.stateService.setFinishedState(false);
-  }
+  // checkForm() {
+  //   this.stateService.setFinishedState(false);
+  // }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -33,8 +32,11 @@ export class LogoComponent {
   }
 
   hideButton() {
-    if (confirm('Czy na pewno wszystko jest poprawne?')) {
+    if (confirm('Czy na pewno wszystko jest poprawne? Potwierdzenie sprawi, że dokument będzie ostateczną formą do druku, tudzież zapisu do pdf')) {
       this.hideInput = false;
+      this.stateService.setFinishedState(false);
+    }else{
+      this.stateService.setFinishedState(true);
     }
   }
 }

@@ -7,11 +7,8 @@
   width: 50px;
   height: 50px;
 }
-.logo-name-container {
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-}
+
+
 .logo-club {
   justify-content: flex-start;
   align-items: flex-end;

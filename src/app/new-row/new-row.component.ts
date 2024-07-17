@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ColorColumnComponent } from '../color-column/color-column.component';
 import { PlayersListComponent } from '../body/players-list/players-list.component';
 import { CommonModule } from '@angular/common';
 import { LogoComponent } from '../header/logo/logo.component';
@@ -12,7 +11,6 @@ import { OnInit } from '@angular/core';
   templateUrl: './new-row.component.html',
   styleUrl: './new-row.component.css',
   imports: [
-    ColorColumnComponent,
     PlayersListComponent,
     CommonModule,
     LogoComponent,
@@ -40,8 +38,5 @@ export class NewRowComponent implements OnInit {
     }
   }
 
-  addClass() {
-    if (!this.isFinished) {
-    }
-  }
+
 }

@@ -1,0 +1,28 @@
+.pitch-container{
+    width:20dvw;
+    height:16.2rem;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    padding: 0px;
+   
+}
+.pitch-input{
+    width:20dvw;
+    border:dotted 2px black;
+}
+
+ 
+  canvas {
+    border: 3px solid #000000;
+    
+  }
+  
+  .controls {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+  }
