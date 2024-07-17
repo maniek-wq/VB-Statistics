@@ -1,14 +1,15 @@
 .pitch-container{
-    width:18dvw;
-    height:16.2rem;
-    justify-content: space-between;
-    align-items: center;
-    justify-items: center;
+    width:max-content;
+    height:max-content;
+    justify-content: space-around;
+    align-items: flex-start;
+    justify-items: flex-start;
     padding: 0px;
-   
-}
+    gap:10px;
+    
+  }
 .pitch-input{
-    width:18dvw;
+    width:max-content;
     border:dotted 2px black;
 }
 
@@ -26,3 +27,17 @@
     justify-content: center;
     align-items: center;
   }
+.cont{
+  flex-direction: column;
+  gap: 1px;
+  
+}
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .can{
+      width:140;
+      height:190px;
+    }
+    .pitch-input{
+      width:270px;
+    }
+}

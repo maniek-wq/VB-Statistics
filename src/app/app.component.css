@@ -6,13 +6,11 @@ body {
 }
 nav {
   max-width: max-content;
-  max-height: 100dvh;
-  
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-items: center;
-  
   flex-direction: column;
   gap:10px;
 }

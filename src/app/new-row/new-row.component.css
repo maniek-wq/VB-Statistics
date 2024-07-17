@@ -1,6 +1,5 @@
 .row {
   width: 100%;
-  height: 25px;
   margin: 0 auto;
 }
 .col {
@@ -11,4 +10,8 @@
 }
 .btn-danger {
   border-radius: 0px 0px 0px 0px;
+}
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
 }
