@@ -9,7 +9,7 @@
     
   }
 .pitch-input{
-    width:max-content;
+    width:inherit;
     border:dotted 2px black;
 }
 
@@ -30,14 +30,12 @@
 .cont{
   flex-direction: column;
   gap: 1px;
-  
+
 }
   @media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .can{
       width:140;
       height:190px;
     }
-    .pitch-input{
-      width:270px;
-    }
+    
 }
