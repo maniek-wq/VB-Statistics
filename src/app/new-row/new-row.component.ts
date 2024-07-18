@@ -24,7 +24,7 @@ export class NewRowComponent implements OnInit {
   @Output() rowRemoved = new EventEmitter<number>();
 
   isFinished: boolean = true;
-  elementHeight: string = "25px";
+  elementHeight: string = "20px";
 
   constructor(private stateService: StateService) {
     this.setElementHeight();
@@ -38,16 +38,17 @@ export class NewRowComponent implements OnInit {
     const height = window.innerHeight;
     console.log('Current width:', width);
     console.log('Current height:', height);
-    if (height <= 768 && width <= 1366) { // Przykładowy zakres dla laptopów
-      this.elementHeight = '22px'; // Wysokość dla laptopów
+    if (width >= 1367 && width <= 1600) { // Przykładowy zakres dla laptopów
+      this.elementHeight = "20px"; // Wysokość dla laptopów
     } else {
-      this.elementHeight = '25px'; // Domyślna wysokość
+      this.elementHeight = "25px"; // Domyślna wysokość
     }
   }
   ngOnInit() {
     this.stateService.isFinished$.subscribe((state) => {
       this.isFinished = state;
     });
+    this.setElementHeight();
   }
   removeRow() {
     if (confirm('Na pewno chcesz usunąć ten wiersz?')) {

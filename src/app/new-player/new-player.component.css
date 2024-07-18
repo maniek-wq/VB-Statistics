@@ -10,8 +10,20 @@
   
 }
 /* Laptops */
-@media only screen and (min-width: 768px) and (max-width: 1366px) {
-  .btn-primary{
-    height:20px;
+@media screen and (max-width: 1024px) {
+  .btn-primary {
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1600px){
+  .btn-primary {
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .btn-primary {
+    height: 20px;
   }
 }
