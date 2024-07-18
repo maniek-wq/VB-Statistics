@@ -49,8 +49,9 @@ export class FieldComponent implements AfterViewInit, OnInit {
     const canvas = this.canvases.toArray()[index].nativeElement;
     const rect = canvas.getBoundingClientRect(); // Uzyskaj pozycję canvas
 
-    const x = event.clientX - rect.left; // Skoryguj współrzędne X
-    const y = event.clientY - rect.top;  // Skoryguj współrzędne Y
+    // Skoryguj współrzędne X i Y
+    const x = (event.clientX - rect.left) * (canvas.width / rect.width);
+    const y = (event.clientY - rect.top) * (canvas.height / rect.height);
 
     this.ctxs[index].beginPath();
     this.ctxs[index].moveTo(x, y);
@@ -109,18 +110,19 @@ changeColor(event: Event) {
 }
 
  
-  private draw(event: MouseEvent,index: number) {
-    if (!this.painting) return;
+private draw(event: MouseEvent, index: number) {
+  if (!this.painting) return;
 
-    const canvas = this.canvases.toArray()[index].nativeElement;
-    const rect = canvas.getBoundingClientRect(); // Uzyskaj pozycję canvas
+  const canvas = this.canvases.toArray()[index].nativeElement;
+  const rect = canvas.getBoundingClientRect(); // Uzyskaj pozycję canvas
 
-    const x = event.clientX - rect.left; // Skoryguj współrzędne X
-    const y = event.clientY - rect.top;  // Skoryguj współrzędne Y
+  // Skoryguj współrzędne X i Y
+  const x = (event.clientX - rect.left) * (canvas.width / rect.width);
+  const y = (event.clientY - rect.top) * (canvas.height / rect.height);
 
-    this.ctxs[index].lineTo(x, y);
-    this.ctxs[index].stroke();
-  }
+  this.ctxs[index].lineTo(x, y);
+  this.ctxs[index].stroke();
+}
  
 
 

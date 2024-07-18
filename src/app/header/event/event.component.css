@@ -1,10 +1,33 @@
 .main-container{
-  
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  justify-items: flex-start;
- 
+  border: solid 1px black;
   gap:10px;
+  justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-container{
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1600px){
+  .main-container{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .main-container{
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
 }
