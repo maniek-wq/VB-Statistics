@@ -30,9 +30,26 @@
   flex-direction: column;
  
 }
-  @media only screen and (min-width: 768px) and (max-width: 1366px) {
-    .can{
-      width:110px;
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  /* Style dla typowych laptopów */
+  .can{
+    width:100px;
+    height:190px;
+    z-index: 1;
+  }
+  .pitch-container{
+    
+    z-index: 0;
+  }
+  .cont{
+    width: 200;
+    flex-direction: column;
+   
+  }
+}
+    @media screen and (min-width: 1367px) and (max-width: 1600px) {
+       .can{
+      width:100px;
       height:190px;
       z-index: 1;
     }
@@ -45,4 +62,24 @@
       flex-direction: column;
      
     }
-}
+  }
+  @media screen and (max-width: 1024px) {
+    .can{
+      width:70px;
+      height:150px;
+      z-index: 1;
+    }
+    .pitch-container{
+      
+      z-index: 0;
+    }
+    .cont{
+      width: 160px;
+      flex-direction: column;
+     
+    }
+    .pitch-input{
+      width:inherit;
+      border:dotted 2px black;
+  }
+  }
