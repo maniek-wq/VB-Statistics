@@ -54,7 +54,7 @@ input{
     justify-items: center; 
     
 }
-@media only screen and (min-width: 1024px) and (max-width: 1366px){
+@media only screen and (min-width: 768px) and (max-width: 1366px){
     .predicted-container{
         height: 10rem;
     }
