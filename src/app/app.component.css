@@ -31,9 +31,12 @@ nav {
 .main-container{
   justify-content: flex-start;
   align-items: flex-start;
-  justify-items: f;
+  
 }
 
 .main-fields{
   flex-direction: column;
+  width:100%;
+  gap:10px;
+ 
 }

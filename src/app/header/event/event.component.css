@@ -1,8 +1,10 @@
 .main-container{
-  width:62dvw;
+  
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-items: flex-start;
+ 
   gap:10px;
-  /* overflow-x: scroll; */
 }
