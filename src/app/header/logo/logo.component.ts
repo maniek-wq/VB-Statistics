@@ -12,12 +12,9 @@ import { StateService } from '../../../state.service';
 export class LogoComponent {
   logoUrl: string | ArrayBuffer | null = '';
   hideInput = true;
-
+  
   constructor(public stateService: StateService) {}
 
-  // checkForm() {
-  //   this.stateService.setFinishedState(false);
-  // }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;

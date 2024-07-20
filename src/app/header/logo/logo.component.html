@@ -1,4 +1,4 @@
-<div class="logo-name-container d-flex mt-4">
+<div class="logo-name-container d-flex mt-2">
   <div class="logo-container">
     <div class="d-flex logo-club">
       <img class="logo-img" [src]="logoUrl" />
@@ -20,12 +20,14 @@
         *ngIf="hideInput"
       />
       <button
+        
         class="btn btn-outline-secondary"
         type="button"
         id="inputGroupFileAddon04"
         
         *ngIf="hideInput"
         (click)="hideButton()"
+        
       >
         Submit
       </button>

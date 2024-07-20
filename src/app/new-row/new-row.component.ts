@@ -55,5 +55,5 @@ export class NewRowComponent implements OnInit {
       this.rowRemoved.emit(this.rowIndex);
     }
   }
- 
+
 }
